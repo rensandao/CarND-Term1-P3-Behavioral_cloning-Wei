@@ -81,19 +81,15 @@ In order to gauge how well the model was working, I split my image and steering 
 For the first try, I only took the images collecting from the center camera to fit the LeNet5 network. In 10 epochs, The validation loss is higher than MSE loss, it implied the model was overfiting and the validation was getting higher from the 4th epoch. In real simulation, the car drove badly and got out of the lane from left side.  
 
 To solve the offset, I augmented the data set by flipping the original images, it worked better in distance, but got out of the lane in right side. Then I included left and right camera images with the steering angles adjusted. Thus, the data set amount inproved by 4 times. This time, 
-It succeeded to run across two turning lane, but failed in third turn, which lacks obvious lane line.
+It succeeded to run across two turning lane, but failed in third turn corner, which lacks obvious lane line.
 
-I refered that sky and trees out of lane in images made bad effect on deep learning. So I included Cropping2D as recommended in course video and It did well and the car sucessfully ran across the corner. 
+I refered that sky, trees and the car hood in images made bad effect on deep learning. So I included Cropping2D function as recommended in course video to cut them and It did well and the car sucessfully ran across the corner. 
 
-I found that several adjustment above,  the validation set loss every time increased after 4th epoch and was also higher than the training set loss. This implied that the model's overfitting stayed still. 
+I found that several adjustment above,  the validation set loss increased  every time after the 4th epoch and was also higher than the training set loss. This implied that the model's overfitting stayed still. 
 
 To combat the overfitting, I modified the model so that ...
 
-Then I ... 
-
-The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track... to improve the driving behavior in these cases, I ....
-
-At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
+Then I changed to a new stronger network, which had been proved by Nvidia company. It did well in training, whose results implied the loss on training set and validation set were both low. But overfitting also accurred. So I also modified the model to get rid of overfitting by incluing Dropout function and color channel changing function.  At the end of the process, the car was able to drive autonomously around the track without leaving the road.
 
 #### 2. Final Model Architecture
 
