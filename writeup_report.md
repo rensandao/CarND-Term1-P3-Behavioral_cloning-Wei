@@ -76,7 +76,7 @@ The overall strategy for deriving a model architecture was to try different neur
 
 My first step was to use a convolution neural network model similar to the LeNet-5. I thought this model might be appropriate because I had constructed and applied it in Traffic-Sign-Classifier project, which proved its strong learning ability and effect.
 
-In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. The first data set I used was collected from the simulator, I ran the car just for over one lap, keeping it ran smoothly in the middle of the lane, but taking several adjustments on purpose from the lane edge to the center of lane. It contained pictures collecting from three cameras, which were center, left and right.
+In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. The first data set I used was collected from the simulator, I ran the car just for over one lap, keeping it ran smoothly in the middle of the lane, but taking several adjustments on purpose from the lane edge to the center of lane. It contained pictures collecting from three cameras mounted in center, left and right position in car
 
 For the first try, I only took the images from the center camera to fit the LeNet5 network. In 10 epochs, The validation loss is higher than MSE loss, it implied the model was overfiting and the validation was getting higher from the 4th epoch. In real simulation, the car drove badly and got out of the lane for left side.  
 
