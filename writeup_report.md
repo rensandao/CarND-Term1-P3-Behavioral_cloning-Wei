@@ -76,14 +76,16 @@ The overall strategy for deriving a model architecture was to try different neur
 
 My first step was to use a convolution neural network model similar to the LeNet-5. I thought this model might be appropriate because I had constructed and applied it in Traffic-Sign-Classifier project, which proved its strong learning ability and effect.
 
-In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. The first data set I used was collected from the simulator, I ran the car just for over one lap, keeping it ran smoothly in the middle of the lane, but taking several adjustments on purpose from the lane edge to the center of lane. It contained pictures collecting from three cameras mounted in center, left and right position in car
+In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. The first data set I used was collected from the simulator, I ran the car just for over one lap, keeping it ran smoothly in the middle of the lane, but taking several adjustments on purpose from the lane edge to the center of lane. It contained pictures collecting from three cameras mounted in center, left and right position in car.
 
-For the first try, I only took the images from the center camera to fit the LeNet5 network. In 10 epochs, The validation loss is higher than MSE loss, it implied the model was overfiting and the validation was getting higher from the 4th epoch. In real simulation, the car drove badly and got out of the lane for left side.  
+For the first try, I only took the images collecting from the center camera to fit the LeNet5 network. In 10 epochs, The validation loss is higher than MSE loss, it implied the model was overfiting and the validation was getting higher from the 4th epoch. In real simulation, the car drove badly and got out of the lane from left side.  
 
-After that, I decided to 
+To solve the offset, I augmented the data set by flipping the original images, it worked better in distance, but got out of the lane in right side. Then I included left and right camera images with the steering angles adjusted. Thus, the data set amount inproved by 4 times. This time, 
+It succeeded to run across two turning lane, but failed in third turn, which lacks obvious lane line.
 
+I refered that sky and trees out of lane in images made bad effect on deep learning. So I included Cropping2D as recommended in course video and It did well and the car sucessfully ran across the corner. 
 
-I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
+I found that several adjustment above,  the validation set loss every time increased after 4th epoch and was also higher than the training set loss. This implied that the model's overfitting stayed still. 
 
 To combat the overfitting, I modified the model so that ...
 
