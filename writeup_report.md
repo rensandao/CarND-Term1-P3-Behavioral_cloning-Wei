@@ -1,4 +1,6 @@
 # **Behavioral Cloning Project**
+
+
 ---
 This project is aiming to utilize deep learning technology to help car drive safely in automonous mode, in the simulator offered by Udacity.
 The goals / steps of this project are the following:
@@ -89,7 +91,7 @@ I found that several adjustment above,  the validation set loss increased  every
 
 To combat the overfitting, I modified the model so that ...
 
-Then I changed to a new stronger network, which had been proved by Nvidia company. It did well in training, whose results implied the loss on training set and validation set were both low. But overfitting also accurred. So I also modified the model to get rid of overfitting by incluing Dropout function and color channel changing function.  At the end of the process, the car was able to drive autonomously around the track without leaving the road.
+Then I changed to a new stronger network, which had been proved by `Nvidia` company. It did well in training, whose results implied the loss on training set and validation set were both low. But overfitting also accurred. So I also modified the model to get rid of overfitting by incluing Dropout function and color channel changing function.  At the end of the process, the car was able to drive autonomously around the track without leaving the road.
 
 #### 2. Final Model Architecture
 
