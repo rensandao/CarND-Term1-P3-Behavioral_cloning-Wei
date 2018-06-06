@@ -1,6 +1,6 @@
 # **Behavioral Cloning Project**
 ---
-
+This project is aiming to utilize deep learning technology to help car drive safely in automonous mode, in the simulator offerd by Udacity.
 The goals / steps of this project are the following:
 * Use the simulator to collect data of good driving behavior
 * Build, a convolution neural network in Keras that predicts steering angles from images
