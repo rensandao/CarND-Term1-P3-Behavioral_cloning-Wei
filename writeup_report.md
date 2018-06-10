@@ -66,8 +66,7 @@ The model used an adam optimizer, so the learning rate was not tuned manually (m
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. The data set I used was offered by course materials, which contained images 
-from three cameras. Here are the Data Map.
+Training data was chosen to keep the vehicle driving on the road. The data set I used was offered by course materials, which contained images from three cameras. Here are the Data Map.
 ![alt text][image1]
 ![alt text][image1]
 
@@ -96,69 +95,58 @@ Then I changed to a new stronger network, which had been proved by `Nvidia` comp
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 83-95) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture is based on Nvidia mature structure(model.py lines 83-95), but included some changes, such as adding dropout layers to minimize overfitting.
 
 Here is a visualization of the architecture 
-____________________________________________________________________________________________________
-Layer (type)                     Output Shape          Param #     Connected to                     
-====================================================================================================
-lambda_1 (Lambda)                (None, 160, 320, 3)   0           lambda_input_1[0][0]             
-____________________________________________________________________________________________________
-cropping2d_1 (Cropping2D)        (None, 90, 320, 3)    0           lambda_1[0][0]                   
-____________________________________________________________________________________________________
-convolution2d_1 (Convolution2D)  (None, 45, 160, 24)   1824        cropping2d_1[0][0]               
-____________________________________________________________________________________________________
-convolution2d_2 (Convolution2D)  (None, 23, 80, 36)    21636       convolution2d_1[0][0]            
-____________________________________________________________________________________________________
-convolution2d_3 (Convolution2D)  (None, 12, 40, 48)    43248       convolution2d_2[0][0]            
-____________________________________________________________________________________________________
-convolution2d_4 (Convolution2D)  (None, 12, 40, 64)    27712       convolution2d_3[0][0]            
-____________________________________________________________________________________________________
-convolution2d_5 (Convolution2D)  (None, 12, 40, 64)    36928       convolution2d_4[0][0]            
-____________________________________________________________________________________________________
-flatten_1 (Flatten)              (None, 30720)         0           convolution2d_5[0][0]            
-____________________________________________________________________________________________________
-dense_1 (Dense)                  (None, 100)           3072100     flatten_1[0][0]                  
-____________________________________________________________________________________________________
-dropout_1 (Dropout)              (None, 100)           0           dense_1[0][0]                    
-____________________________________________________________________________________________________
-dense_2 (Dense)                  (None, 50)            5050        dropout_1[0][0]                  
-____________________________________________________________________________________________________
-dropout_2 (Dropout)              (None, 50)            0           dense_2[0][0]                    
-____________________________________________________________________________________________________
-dense_3 (Dense)                  (None, 10)            510         dropout_2[0][0]                  
-____________________________________________________________________________________________________
-dropout_3 (Dropout)              (None, 10)            0           dense_3[0][0]                    
-____________________________________________________________________________________________________
-dense_4 (Dense)                  (None, 1)             11          dropout_3[0][0]                  
-====================================================================================================
 
 ![alt text][image1]
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+For Track 1, I abandoned my collecting data, and used the data offered by ```the Course material ```. To capture good driving behavior,It mainly recorded two laps using center lane driving. Here is an example image of center lane driving:
 
 ![alt text][image2]
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+It also recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to get back to center. These images show what a recovery looks like starting from ... :
 
 ![alt text][image3]
 ![alt text][image4]
 ![alt text][image5]
 
-Then I repeated this process on track two in order to get more data points.
+And It recorded the reverse running data, which can improve the nomalization.
 
-To augment the data set, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+To augment the data set, I also flipped images and angles thinking that this would helply adjust steering angles. For example, here are images from three cameras that has then been flipped:
 
 ![alt text][image6]
 ![alt text][image7]
 
-Etc ....
 
 After the collection process, I had X number of data points. I then preprocessed this data by ...
 
 
+Of cource, on track 2, I repeated this process to get data points.
+
+#### 4. Generator
+The amount of images in the data set after augmenting became 6 times larger. It was so large that my memory was occupied by 98 at most, and got stuck. So I have to choose the AWS fly sevice, which really made effect.
+
+But to train these data,  it was also a big tough to load all the data for only one time. So it's better to use patchs to feed to network, which is shown in the last project-Traffic Signs Classifier. Here it is Generator function method, which can realize it.
+
+There are two ways to use Generator in this case, with small difference:
+
+(1) Imread the data in advance, and fliped or other augmented ways to deal with images. Then split them to train and validation samples. Finally, feed every patch data to network model.
+
+(2) Unlike imreading before Generator, split the csv file (mainly the images' paths and steering angles) firstly, Then in the Generation function, imread and augmented a patch of data every batch size.
+
+#### 5. Test results
+
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 7 as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5 after trials.
+
+Here is a visualization of the Loss Map:
+![alt text][image5]
+
+
+### Further improvement
+
+
