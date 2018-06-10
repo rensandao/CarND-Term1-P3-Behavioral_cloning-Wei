@@ -69,6 +69,7 @@ The model used an adam optimizer, so the learning rate was not tuned manually (m
 Training data was chosen to keep the vehicle driving on the road. The data set I used was offered by course materials, which contained images 
 from three cameras. Here are the Data Map.
 ![alt text][image1]
+![alt text][image1]
 
 For details about how I created the training data, see the next section. 
 
@@ -89,17 +90,15 @@ It succeeded to run across two turning lane, but failed in third turn corner, wh
 
 I refered that sky, trees and the car hood in images made bad effect on deep learning. So I included Cropping2D function as recommended in course video to cut them and It did well and the car sucessfully ran across the corner. 
 
-I found that several adjustment above,  the validation set loss increased  every time after the 4th epoch and was also higher than the training set loss. This implied that the model's overfitting stayed still. 
-
-To combat the overfitting, I modified the model so that ...
+I found that several adjustment above,  the validation set loss increased  every time after the 4th epoch and was also higher than the training set loss. This implied that the model's overfitting stayed still. To combat the overfitting, I modified the model by adding three dropout layers, it went better, but cannot perfectly remove.
 
 Then I changed to a new stronger network, which had been proved by `Nvidia` company. It did well in training, whose results implied the loss on training set and validation set were both low. But overfitting also accurred. So I also modified the model to get rid of overfitting by incluing Dropout function and color channel changing function.  At the end of the process, the car was able to drive autonomously around the track without leaving the road.
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture (model.py lines 83-95) consisted of a convolution neural network with the following layers and layer sizes ...
 
-Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
+Here is a visualization of the architecture 
 
 ![alt text][image1]
 
