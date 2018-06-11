@@ -100,19 +100,17 @@ The final model architecture is based on Nvidia mature structure(model.py lines 
 
 Here is a visualization of the architecture 
 
-<img src="./Visualized Images/Architecture visualization.png" width="400px">
+<img src="./Visualized Images/Architecture visualization.png" width="500px" height="500px">
 
 #### 3. Creation of the Training Set & Training Process
 
 For Track 1, I abandoned my collecting data, and used the data offered by ```the Course material ```. To capture good driving behavior, It mainly recorded two laps using center lane driving. Here is an example image of center lane driving:
 
-<img src="./Visualized Images/Track1_center0.png" width="400px">
+<img src="./Visualized Images/Track1_center0.jpg" width="200px">
 
 It also recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to get back to center. These images show what a recovery looks like starting from left :
 
-<img src="./Visualized Images/Track1_center1.png" width="400px">
-<img src="./Visualized Images/Track1_center2.png" width="400px">
-<img src="./Visualized Images/Track1_center3.png" width="400px">
+<img src="./Visualized Images/Track1_center1.jpg" width="150px">   <img src="./Visualized Images/Track1_center2.jpg" width="150px">  <img src="./Visualized Images/Track1_center3.jpg" width="150px">
 
 And It recorded the reverse running data, which can improve the nomalization. On track 2, I repeated this process to get data points.
 
