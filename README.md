@@ -55,9 +55,13 @@ The model used an adam optimizer, so the learning rate was not tuned manually (m
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. The data set for track one I finally used was offered by [Project Resources](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip), which contained images from three cameras. Here is the Data Map for track one and track two.
+Training data was chosen to keep the vehicle driving on the road. The data set for track one I finally used was offered by [Project Resources](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip), which contained images from three cameras. Here is the Data Map for `track one` and `track two`.
+
+Track 1
 
 <img src="./Visualized Images/Track1-Data Map.png" width="400px"> <img src="./Visualized Images/Track1-Steering Angle Map.png" width="400px">
+
+Track 2
 
 <img src="./Visualized Images/Track2-Data Map.png" width="400px"> <img src="./Visualized Images/Track2-Steering Angle Map.png" width="400px">
 
