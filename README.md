@@ -1,6 +1,5 @@
 # **Behavioral Cloning Project**
 
-
 ---
 This project is aiming to utilize deep learning technology to help car drive safely in automonous mode, in the simulator offered by Udacity.
 The goals / steps of this project are the following:
@@ -10,18 +9,6 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
-[//]: # (Image References)
-
-[image1]: ./Visualized Images/Track1-Data Map.png
-[image2]: ./Visualized Images/Track1-Data Map.png
-[image3]: ./Visualized Images/Track1-loss.png
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
-
-
-![alt text][image3]
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -69,8 +56,9 @@ The model used an adam optimizer, so the learning rate was not tuned manually (m
 #### 4. Appropriate training data
 
 Training data was chosen to keep the vehicle driving on the road. The data set I finally used was offered by [Project Resources](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip), which contained images from three cameras. Here are the Data Map.
-![alt text][image1]
-![alt text][image1]
+
+<img src="./Visualized Images/Track1-Data Map.png" width="400px">
+<img src="./Visualized Images/Track1-Steering Angle Map.png" width="400px">
 
 For details about how I created the training data, see the next section. 
 
@@ -93,7 +81,7 @@ I refered that sky, trees and the car hood in images made bad effect on deep lea
 
 I found that several adjustment above,  the validation set loss increased  every time after the 4th epoch and was also higher than the training set loss. This implied that the model's overfitting stayed still. To combat the overfitting, I modified the model by adding three dropout layers, it went better, but cannot perfectly remove.
 
-Then I changed to a new stronger network, which had been proved by `Nvidia` company. It did well in training, whose results implied the loss on training set and validation set were both low. But overfitting also accurred. So I also modified the model to get rid of overfitting by incluing Dropout function and color channel changing function.  At the end of the process, the car was able to drive autonomously around the track without leaving the road.
+Then I changed to a new stronger network, which had been proved by `NVIDIA Team`. It did well in training, whose results implied the loss on training set and validation set were both low. But overfitting also accurred. So I also modified the model to get rid of overfitting by incluing Dropout function and color channel changing function.  At the end of the process, the car was able to drive autonomously around the track without leaving the road.
 
 #### 2. Final Model Architecture
 
@@ -101,7 +89,7 @@ The final model architecture is based on Nvidia mature structure(model.py lines 
 
 Here is a visualization of the architecture 
 
-![alt text][image1]
+<img src="./Visualized Images/Architecture visualization.png" width="400px">
 
 #### 3. Creation of the Training Set & Training Process
 
