@@ -71,7 +71,7 @@ For details about how I created the training data, see the next section.
 
 #### 1. Solution Design Approach
 
-The overall strategy for deriving a model architecture was to try different neural networks, fed them with a certain amount of picture data, and train for minimum loss and valitdation loss. And the last key step was to check the car driving in autonomous mode, using the deep learning results. 
+`The overall strategy` for deriving a model architecture was to try different neural networks, fed them with a certain amount of picture data, and train for minimum loss and valitdation loss. And the last key step was to check the car driving in autonomous mode, using the deep learning results. 
 
 My first step was to use a convolution neural network model similar to the LeNet-5. I thought this model might be appropriate because I had constructed and applied it in Traffic-Sign-Classifier project, which proved its strong learning ability and effect.
 
@@ -114,29 +114,31 @@ It also recorded the vehicle recovering from the left side and right sides of th
 <img src="./Visualized Images/Track1_center2.png" width="400px">
 <img src="./Visualized Images/Track1_center3.png" width="400px">
 
-And It recorded the reverse running data, which can improve the nomalization.
+And It recorded the reverse running data, which can improve the nomalization. On track 2, I repeated this process to get data points.
 
 To augment the data set, I also flipped images and angles thinking that this would helply adjust steering angles. For example, here are images from three cameras that has then been flipped:
 
+Track 1
+
 <img src="./Visualized Images/Track1-flipping.png" width="400px">
+
+Track 2
+
 <img src="./Visualized Images/Track2-flipping.png" width="400px">
 
 
-After the collection process, I had X number of data points. I then preprocessed this data by ...
-
-
-Of cource, on track 2, I repeated this process to get data points.
 
 #### 4. Generator
+
 The amount of images in the data set after augmenting became 6 times larger. It was so large that my memory was occupied by 98 at most, and got stuck. So I have to choose the AWS fly sevice, which really made effect.
 
-But to train these data,  it was also a big tough to load all the data for only one time. So it's better to use patchs to feed to network, which is shown in the last project-Traffic Signs Classifier. Here it is Generator function method, which can realize it.
+But to train these data,  it was also a big tough to load all the data for only one time. So it's better to use patchs to feed to network, which is shown in the last project-Traffic Signs Classifier. Here it is `generator` function method, which can realize it very  well.
 
-There are two ways to use Generator in this case, with small difference:
+There are two ways to use `generator` in this case, with small difference:
 
 (1) Imread the data in advance, and fliped or other augmented ways to deal with images. Then split them to train and validation samples. Finally, feed every patch data to network model.
 
-(2) Unlike imreading before Generator, split the csv file (mainly the images' paths and steering angles) firstly, Then in the Generation function, imread and augmented a patch of data every batch size.
+(2) Unlike imreading before generator, split the csv file (mainly the images' paths and steering angles) firstly, Then in the generation function, imread and augmented a patch of data every batch size.
 
 #### 5. Test results
 
@@ -145,9 +147,10 @@ I finally randomly shuffled the data set and put 20% of the data into a validati
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5 after trials.
 
 Here is a visualization of the Loss Map:
-![alt text][image5]
+<img src="./Visualized Images/Track1-loss.png" width="400px">
 
 
-### Further improvement
+### Conclusion and Disscussion
+
 
 
