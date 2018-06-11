@@ -55,7 +55,7 @@ The model used an adam optimizer, so the learning rate was not tuned manually (m
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. The data set I finally used was offered by [Project Resources](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip), which contained images from three cameras. Here are the Data Map.
+Training data was chosen to keep the vehicle driving on the road. The data set I finally used was offered by [Project Resources](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip), which contained images from three cameras. Here is the Data Map.
 
 <img src="./Visualized Images/Track1-Data Map.png" width="400px"> <img src="./Visualized Images/Track1-Steering Angle Map.png" width="400px">
 
@@ -84,6 +84,7 @@ Then I changed to a new stronger network, which had been proved by NVIDIA Team-[
 
 Here is their basic CNN architecture.
 
+<img src="./Visualized Images/nVidia_model.png" width="400px">
 
 It did well in training, whose results implied the loss on training set and validation set were both low. But overfitting also accurred. So I also modified the model to get rid of overfitting by incluing Dropout function and color channel changing function.  At the end of the process, the car was able to drive autonomously around the track without leaving the road.
 
