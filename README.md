@@ -22,8 +22,8 @@ My project includes the following files:
 * model.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
 * model.h5 containing a trained convolution neural network 
-* writeup_report.md summarizing the results
-* video.mp4 recording car's running for one lap in autonomous mode 
+* README.md summarizing the results
+* run_1.mp4 recording car's running for one lap in autonomous mode on track one 
 
 #### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
@@ -151,9 +151,12 @@ Here is a visualization of the Loss Map:
 
 ### Conclusion and Disscussion
 
-1. keras shows its convenience in using compared to tensorflow
-2. Data collecting work is hard but definitely important and patience-needed. 
+Firstly, Keras shows its great convenience in fomat using compared to TensorFlow. In TensorFlow, it need detailed arguments to be added
+one by one, easily confused, but Keras offered better interface which got things done easily in personal idea.
 
+Secondly, for Behavioral Cloning. Data collecting work is hard but definitely important and patience-needed. The quality of data set matters even more than architecture in some degree. So how to collect different effective and viable data should awalys be considered as good way. So it need some technique and more patience that personally need to enhance.
 
+besides, data augment techniques need to add based on different scene, such as track one and track two. Currently I haven't realize it , cause I need more time.
 
+Finally, with data augmented and strong CNN architecture trained, car can basically lead its own way on track. But there are a lot work to do since we only consider the steering angle. It is so complicated that we have further way to go.
 
