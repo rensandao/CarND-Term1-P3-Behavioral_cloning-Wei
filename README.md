@@ -12,9 +12,9 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1](./Visualized Images/Track1-Data Map.png) 
-[image2] ./Visualized Images/Track1-Data Map.png
-[image3]:(./Visualized Images/Track1-loss.png)
+[image1]: ./Visualized Images/Track1-Data Map.png
+[image2]: ./Visualized Images/Track1-Data Map.png
+[image3]: ./Visualized Images/Track1-loss.png
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
