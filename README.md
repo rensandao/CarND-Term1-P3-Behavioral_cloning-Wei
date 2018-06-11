@@ -11,10 +11,8 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 
-[//]: # (Image References)
-
-[image1]: ./Visualized Images/Track1-Data Map.png 
-[image2]: ./examples/placeholder.png "Grayscaling"
+[image1]: (./Visualized Images/Track1-Data Map.png) 
+[image2]: ./Visualized Images/Track1-Data Map.png
 [image3]: ./examples/placeholder_small.png "Recovery Image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
