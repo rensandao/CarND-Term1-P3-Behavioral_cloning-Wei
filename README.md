@@ -55,9 +55,11 @@ The model used an adam optimizer, so the learning rate was not tuned manually (m
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. The data set I finally used was offered by [Project Resources](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip), which contained images from three cameras. Here is the Data Map.
+Training data was chosen to keep the vehicle driving on the road. The data set for track one I finally used was offered by [Project Resources](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip), which contained images from three cameras. Here is the Data Map for track one and track two.
 
 <img src="./Visualized Images/Track1-Data Map.png" width="400px"> <img src="./Visualized Images/Track1-Steering Angle Map.png" width="400px">
+
+<img src="./Visualized Images/Track2-Data Map.png" width="400px"> <img src="./Visualized Images/Track2-Steering Angle Map.png" width="400px">
 
 For details about how I created the training data, see the next section. 
 
@@ -98,22 +100,22 @@ Here is a visualization of the architecture
 
 #### 3. Creation of the Training Set & Training Process
 
-For Track 1, I abandoned my collecting data, and used the data offered by ```the Course material ```. To capture good driving behavior,It mainly recorded two laps using center lane driving. Here is an example image of center lane driving:
+For Track 1, I abandoned my collecting data, and used the data offered by ```the Course material ```. To capture good driving behavior, It mainly recorded two laps using center lane driving. Here is an example image of center lane driving:
 
-![alt text][image2]
+<img src="./Visualized Images/Track1_center0.png" width="400px">
 
-It also recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to get back to center. These images show what a recovery looks like starting from ... :
+It also recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to get back to center. These images show what a recovery looks like starting from left :
 
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
+<img src="./Visualized Images/Track1_center1.png" width="400px">
+<img src="./Visualized Images/Track1_center2.png" width="400px">
+<img src="./Visualized Images/Track1_center3.png" width="400px">
 
 And It recorded the reverse running data, which can improve the nomalization.
 
 To augment the data set, I also flipped images and angles thinking that this would helply adjust steering angles. For example, here are images from three cameras that has then been flipped:
 
-![alt text][image6]
-![alt text][image7]
+<img src="./Visualized Images/Track1-flipping.png" width="400px">
+<img src="./Visualized Images/Track2-flipping.png" width="400px">
 
 
 After the collection process, I had X number of data points. I then preprocessed this data by ...
