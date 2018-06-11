@@ -161,3 +161,4 @@ besides, data augment techniques need to add based on different scene, such as t
 
 Finally, with data augmented and strong CNN architecture trained, car can basically lead its own way on track. But there are a lot work to do since we only consider the steering angle. It is so complicated that we have further way to go.
 
+### Adjustment log
