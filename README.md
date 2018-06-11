@@ -1,5 +1,7 @@
 # **Behavioral Cloning Project**
 
+<img src="./Visualized Images/Track1-seg1.gif?raw=true">              <img src="./Visualized Images/Track1-seg2.gif?raw=true">
+
 ---
 This project is aiming to utilize deep learning technology to help car drive safely in automonous mode, in the simulator offered by Udacity.
 The goals / steps of this project are the following:
