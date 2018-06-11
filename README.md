@@ -39,9 +39,9 @@ The model.py file contains the code for training and saving the convolution neur
 
 #### 1. An appropriate model architecture has been employed
 
-My model consists of a convolution neural network with 2x2 filter sizes and depths between 24 and 64 (model.py lines 82-87) 
+My model consists of a convolution neural network with 2x2 filter sizes and depths between 24 and 64 (model.py lines 83-87) 
 
-The model includes activation "relu" to introduce nonlinearity (code line 82-87), and the data is normalized in the model using a Keras lambda layer (code line 81 ). A cropping method is after Lambda layer(code line 82)
+The model includes activation "relu" to introduce nonlinearity (code line 83-87), and the data is normalized in the model using a Keras lambda layer (code line 81 ). A cropping method is after Lambda layer(code line 82)
 
 #### 2. Attempts to reduce overfitting in the model
 
