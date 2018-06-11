@@ -108,7 +108,7 @@ For Track 1, I abandoned my collecting data, and used the data offered by ```the
 
 <img src="./Visualized Images/Track1_center0.jpg" width="200px">
 
-It also recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to get back to center. These images show what a recovery looks like starting from left :
+It also recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to get back to center. These images show what a recovery looks like starting from right :
 
 <img src="./Visualized Images/Track1_center1.jpg" width="150px">   <img src="./Visualized Images/Track1_center2.jpg" width="150px">  <img src="./Visualized Images/Track1_center3.jpg" width="150px">
 
@@ -151,6 +151,8 @@ Here is a visualization of the Loss Map:
 
 ### Conclusion and Disscussion
 
+1. keras shows its convenience in using compared to tensorflow
+2. Data collecting work is hard but definitely important and patience-needed. 
 
 
 
