@@ -102,7 +102,7 @@ Here is a visualization of the architecture
 
 <img src="./Visualized Images/Architecture visualization.png" width="500px" height="500px">
 
-#### 3. Creation of the Training Set & Training Process
+#### 3. Creation of the Training Set 
 
 For Track 1, I abandoned my collecting data, and used the data offered by `course material`. To capture good driving behavior, It mainly recorded two laps using center lane driving. Here is an example image of center lane driving:
 
@@ -126,7 +126,7 @@ Track 2
 
 
 
-#### 4. Generator
+#### 4. Generator function
 
 The amount of images in the data set after augmenting became 6 times larger. It was so large that my memory was occupied by 98 at most, and got stuck. So I have to choose the AWS fly sevice, which really made effect.
 
