@@ -148,7 +148,7 @@ Here is a visualization of the Loss Map:
 
 <img src="./Visualized Images/Track1-loss.png" width="400px">
 
-Here is the final running [video](./run_1.mp4) on track one. Track two is currently on the road. 
+Here is the final running [video](./run_1.mp4) on track one. Video for track two is currently on the road. 
 
 ### Conclusion and Disscussion
 
