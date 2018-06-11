@@ -66,7 +66,7 @@ The model used an adam optimizer, so the learning rate was not tuned manually (m
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. The data set I used was offered by course materials, which contained images from three cameras. Here are the Data Map.
+Training data was chosen to keep the vehicle driving on the road. The data set I finally used was offered by [Project Resources](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip), which contained images from three cameras. Here are the Data Map.
 ![alt text][image1]
 ![alt text][image1]
 
