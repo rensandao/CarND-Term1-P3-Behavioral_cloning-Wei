@@ -104,7 +104,7 @@ Here is a visualization of the architecture
 
 #### 3. Creation of the Training Set 
 
-For Track 1, I abandoned my collecting data, and used the data offered by `course material`. To capture good driving behavior, It mainly recorded two laps using center lane driving. Here is an example image of center lane driving:
+For Track 1, I abandoned my collecting data, and used the data offered by `Course Resource`. To capture good driving behavior, It mainly recorded two laps using center lane driving. Here is an example image of center lane driving:
 
 <img src="./Visualized Images/Track1_center0.jpg" width="200px">
 
